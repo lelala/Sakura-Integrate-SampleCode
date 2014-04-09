@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>sakura整合sample_PHP_</Name>
+    <ProjectGuid>ab8f07b2-2085-48e5-943b-7353ce0d2a8b</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>sakura整合sample_PHP_</RootNamespace>
+    <!-- important to be opened by PHP Tools, when also Phalanger Tools are installed -->
+    <ProjectTypeGuids>{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
+    <AssemblyName>sakura整合sample(PHP)</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <IncludeDebugInformation>true</IncludeDebugInformation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <IncludeDebugInformation>false</IncludeDebugInformation>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="config.php" />
+    <Compile Include="EntryPoint.php" />
+    <Compile Include="Default.php" />
+    <Compile Include="OAuthCallBack.php" />
+  </ItemGroup>
+</Project>
