@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+
+<!-- 
+' 請至 https://auth.ischool.com.tw/1campus/manage/ 註冊App
+' 取得ClientID、ClientSecret
+'
+' RedirectURI 您註冊App時設定的OAuth RedirectURI
+' EntryPoint 您的系統進入OAuth認證及授權的網址
+-->
+	<context-param>
+		<param-name>clientID</param-name>
+		<param-value>***************************</param-value>
+	</context-param>
+	<context-param>
+		<param-name>clientSecret</param-name>
+		<param-value>****************************</param-value>
+	</context-param>
+	<context-param>
+		<param-name>redirectUri</param-name>
+		<param-value>http://localhost:8080/callback</param-value>
+	</context-param>
+	<context-param>
+		<param-name>entryPoint</param-name>
+		<param-value>http://localhost:8080/EntryPoint.jsp</param-value>
+	</context-param>
+
+<!-- 註冊 Servlet -->
+	<servlet>
+		<servlet-name>callbackServlet</servlet-name>
+		<servlet-class>tw.com.ischool.oauthclientsample.OAuthCallbackServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>callbackServlet</servlet-name>
+		<url-pattern>/callback</url-pattern>
+	</servlet-mapping>
+
+</web-app>    
