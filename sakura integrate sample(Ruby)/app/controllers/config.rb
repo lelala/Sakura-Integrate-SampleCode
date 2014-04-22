@@ -8,5 +8,5 @@
 
 ClientId = '*******************************'
 ClientSecret = '**********************************************'
-RedirectURI = 'http://localhost:26786/OneCampus/OAuthCallBack'
-EntryPoint = 'http://localhost:26786/OneCampus/EntryPoint'
+RedirectURI = 'http://localhost:3000/OneCampus/OAuthCallBack'
+EntryPoint = 'http://localhost:3000/OneCampus/EntryPoint'
